@@ -1,0 +1,66 @@
+{
+  "name": "qualistat-auditor",
+  "version": "1.0.0",
+  "description": "A collaborative platform for mastering the new CQC assessment framework",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:prod": "env-cmd -f .env.production react-scripts build",
+    "build:staging": "env-cmd -f .env.staging react-scripts build",
+    "build:development": "env-cmd -f .env.development react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "./deploy.sh",
+    "deploy:check": "./check-build.sh",
+    "setup:env": "./setup-env.sh",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.10",
+    "@mui/material": "^5.14.10",
+    "@supabase/auth-helpers-nextjs": "^0.10.0",
+    "@supabase/auth-helpers-react": "^0.5.0",
+    "@supabase/ssr": "^0.7.0",
+    "@supabase/supabase-js": "^2.57.0",
+    "axios": "^1.5.0",
+    "chart.js": "^4.4.0",
+    "dotenv": "^17.2.2",
+    "firebase": "^10.4.0",
+    "jspdf": "^3.0.2",
+    "jspdf-autotable": "^5.0.2",
+    "jwt-decode": "^3.1.2",
+    "lucide-react": "^0.542.0",
+    "query-string": "^8.1.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
+    "react-scripts": "^5.0.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "source-map-explorer": "^2.5.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
